@@ -5,9 +5,11 @@ from send_email import send_email
 
 st.header("Contact Us")
 
+df = pandas.read_csv("topics.csv")
+
 with st.form(key="email_form"):
     user_email = st.text_input("Type your email address:")
-    topic_select = "Topico seleccionado por el usuario"
+    topic_select = st.selectbox('What Topic do you want to discuss?:', df["topic"])
     user_message = st.text_area("Your message:")
     button = st.form_submit_button("Submit")
 
