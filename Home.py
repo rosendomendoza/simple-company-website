@@ -33,9 +33,10 @@ with col1:
         ln = row["last name"].title()
         role = row["role"]
         img = row["image"]
+        st.image(f"images/{img}")
         st.subheader(fn+" "+ln)
         st.write(role)
-        st.image(f"images/{img}")
+
 
 with col2:
     for index, row in df[4:8].iterrows():
@@ -43,9 +44,10 @@ with col2:
         ln = row["last name"].title()
         role = row["role"]
         img = row["image"]
+        st.image(f"images/{img}")
         st.subheader(fn+" "+ln)
         st.write(role)
-        st.image(f"images/{img}")
+
 
 with col3:
     for index, row in df[8:].iterrows():
@@ -53,6 +55,6 @@ with col3:
         ln = row["last name"].title()
         role = row["role"]
         img = row["image"]
+        st.image(f"images/{img}")
         st.subheader(fn+" "+ln)
         st.write(role)
-        st.image(f"images/{img}")
